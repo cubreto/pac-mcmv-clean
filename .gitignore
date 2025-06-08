@@ -10,3 +10,4 @@ __pycache__/
 # Build
 *.egg-info/
 __dist__/
+sample_data/*
