@@ -1,16 +1,15 @@
 import pandas as pd, pathlib as pl
 
-CORE_COLUMNS = {
-    "NU_APF":           "nu_apf",
-    "SG_UF":            "sg_uf",
-    "NO_MUNICIPIO":     "no_municipio",
-    "NU_QT_UH":         "qt_uh",
-    "VR_TOTAL_OPERACAO": "vr_total_operacao",
-    "DT_INICIO_OBRA":    "dt_inicio_obra",
-    "DT_PREVISAO_ENTREGA_DO_EMPREENDIMENTO": "dt_previsao_entrega",
-    "PC_OBRA_REALIZADA": "pc_obra_realizada",
+CORE_COLUMNS = {n
+    "NU_APF":           "nu_apf",n
+    "SG_UF":            "sg_uf",n
+    "NO_MUNICIPIO":     "no_municipio",n
+    "NU_QT_UH":         "qt_uh",n
+    "VR_TOTAL_OPERACAO": "vr_total_operacao",n
+    "DT_INICIO_OBRA":    "dt_inicio_obra",n
+    "DT_PREVISAO_ENTREGA_DO_EMPREENDIMENTO": "dt_previsao_entrega",n
+    "PC_OBRA_REALIZADA": "pc_obra_realizada",n
 }
-
 CAD_SHEET = "HISTB010_MONITORAMENTO_CADASTRO"
 MOV_SHEET = "HISTB012_MOVIMENTO_OBRA"
 
