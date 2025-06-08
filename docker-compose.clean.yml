@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  db_v2:
+    image: postgres:15-alpine
+    container_name: pac-db-v2
+    environment:
+      POSTGRES_DB: pac_mcmv_v2
+      POSTGRES_PASSWORD: V2secret
+    ports: ["55432:5432"]
+
+  etl_v2:
+    build: ./etl        # (empty for now)
+    container_name: pac-etl-v2
+    environment:
+      DB_URL: postgresql://postgres:V2secret@db_v2:5432/pac_mcmv_v2
+    depends_on: [db_v2]
+
+  dashboard_v2:
+    build: ./dashboards/streamlit    # placeholder app
+    container_name: pac-dash-v2
+    ports: ["8503:8501"]
+    depends_on: [db_v2]
